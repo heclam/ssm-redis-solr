@@ -1,0 +1,25 @@
+恩，现在就来讲一下这个项目吧<br/>
+这个项目登陆采用shiro认证，使用solr建立索引库，这样以来方便检索，solr采用ik中文分词器，缓存使用redis，商品管理页面采用SpringMVC上传图片<br/>
+环境搭建：<br/>
+     JDK1.8<br/>
+    tomcat9.0<br/>
+    MySQL5.7<br/>
+    shiro<br/>
+    redis<br/>
+    solr8.0<br/>
+    前端采用Vue+element的方式布局页面<br/>
+   下面来看一下展示的效果<br/>
+   **登陆界面** 采用Shiro进行认证，密码采用MD5加密，并实现了Shiro记住我的功能
+    ![](img/login.PNG)
+    首页：登陆成功之后，采用solrTemplate查询索引,根据关键词查询，后台获取数据之后，通过vue+element展示在前端，后台分页采用了PageHepler,前端采用了element的分页
+    ![](img/index.PNG)
+    ![](img/index2.PNG)
+    ![](img/index3.PNG)
+    看一下商品管理：可以根据品牌或卖家进行筛选
+    ![](img/good1.PNG)
+    添加新商品：
+    ![](img/add_new.PNG)
+    编辑商品：
+    ![](img/edit.PNG)
+    删除商品：
+    ![](img/delete.PNG)
