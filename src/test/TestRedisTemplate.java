@@ -9,10 +9,7 @@ import org.springframework.test.context.junit4.SpringJUnit4ClassRunner;
 import java.util.List;
 import java.util.Set;
 
-/**
- * @auther TyCoding
- * @date 2018/9/21
- */
+
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = {"classpath:spring/spring*.xml"})
 public class TestRedisTemplate {
@@ -26,7 +23,7 @@ public class TestRedisTemplate {
     //设置值
     @Test
     public void setValue(){
-        redisTemplate.boundValueOps("name").set("tycoding");
+        redisTemplate.boundValueOps("name").set("heclam");
     }
 
     //查询值
@@ -46,8 +43,8 @@ public class TestRedisTemplate {
     //插入值
     @Test
     public void setValueBySet(){
-        redisTemplate.boundSetOps("nameset").add("tycoding");
-        redisTemplate.boundSetOps("nameset").add("涂陌");
+        redisTemplate.boundSetOps("nameset").add("heclam");
+        redisTemplate.boundSetOps("nameset").add("abc");
     }
 
     //查询值
@@ -60,7 +57,7 @@ public class TestRedisTemplate {
     //删除集合中的某一个值
     @Test
     public void deleteValueBySet(){
-        redisTemplate.boundSetOps("nameset").remove("涂陌");
+        redisTemplate.boundSetOps("nameset").remove("abc");
     }
 
     //删除整个集合
@@ -74,8 +71,8 @@ public class TestRedisTemplate {
     //右压栈：后添加的对象排在后边
     @Test
     public void setRightValueByList(){
-        redisTemplate.boundListOps("namelist").rightPush("tycoding");
-        redisTemplate.boundListOps("namelist").rightPush("涂陌");
+        redisTemplate.boundListOps("namelist").rightPush("heclam");
+        redisTemplate.boundListOps("namelist").rightPush("abc");
     }
 
     //显示右压栈的集合
@@ -88,8 +85,8 @@ public class TestRedisTemplate {
     //左压栈：后添加的对象排在前面
     @Test
     public void setLeftValueByList(){
-        redisTemplate.boundListOps("namelist2").leftPush("tycoding");
-        redisTemplate.boundListOps("namelist2").leftPush("涂陌");
+        redisTemplate.boundListOps("namelist2").leftPush("heclam");
+        redisTemplate.boundListOps("namelist2").leftPush("abc");
     }
 
     //显示左压栈的集合
@@ -116,8 +113,8 @@ public class TestRedisTemplate {
     //插入值
     @Test
     public void setValueByHash(){
-        redisTemplate.boundHashOps("namehash").put("a","tycoding");
-        redisTemplate.boundHashOps("namehash").put("b","涂陌");
+        redisTemplate.boundHashOps("namehash").put("a","heclam");
+        redisTemplate.boundHashOps("namehash").put("b","abc");
     }
 
     //提取所有的KEY

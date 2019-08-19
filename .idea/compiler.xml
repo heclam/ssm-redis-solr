@@ -9,8 +9,5 @@
         <module name="ssm-redis-solr" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel target="1.8">
-      <module name="ssm-redis-solr" target="1.7" />
-    </bytecodeTargetLevel>
   </component>
 </project>

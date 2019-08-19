@@ -4,7 +4,7 @@ Vue.http.options.emulateJSON = true;
 // Vue实例
 new Vue({
     el: '#app',
-    data() {
+    data(){
         return {
             checked: false,
             login: {
@@ -22,16 +22,16 @@ new Vue({
          */
         loadings(){
             this.loading = this.$loading({
-                lock: true,
+                lock: true,  //锁定屏幕的滚动
                 text: '拼命加载中',
                 spinner: 'el-icon-loading',
             });
             setTimeout(() => {
                 this.loading.close();
-            }, 2000);
+            },2000);
         },
 
-        submitForm(login) {
+        submitForm(login) { //$refs[formName] 这个是获取表单的验证，具体的可以查看element的解析
             this.$refs[login].validate((valid) => {
                 if (valid) {
                     this.loadings(); //加载动画

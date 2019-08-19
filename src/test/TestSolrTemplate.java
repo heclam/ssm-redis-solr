@@ -1,4 +1,4 @@
-import cn.tycoding.entity.Goods;
+import cn.heclam.entity.Goods;
 import org.junit.Test;
 import org.junit.runner.RunWith;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -14,10 +14,6 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
-/**
- * @auther TyCoding
- * @date 2018/9/19
- */
 @RunWith(SpringJUnit4ClassRunner.class)
 @ContextConfiguration(locations = "classpath:spring/spring-solr.xml")
 public class TestSolrTemplate {

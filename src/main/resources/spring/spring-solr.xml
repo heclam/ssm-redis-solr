@@ -8,7 +8,10 @@
 		http://www.springframework.org/schema/beans/spring-beans.xsd">
 
     <!-- solr服务器地址 -->
-    <solr:solr-server id="solrServer" url="http://127.0.0.1:8080/solr/new_core"/>
+  <solr:solr-server id="solrServer" url="http://127.0.0.1:8080/solr/new_core"/>
+
+    <!-- 这个是没有部署在tomcat的solr服务器 -->
+<!--    <solr:solr-server id="solrServer" url="http://127.0.0.1:8983/solr/new_core"/>-->
 
     <!-- solr模板，使用solr模板可对索引库进行CRUD的操作 -->
     <bean id="solrTemplate" class="org.springframework.data.solr.core.SolrTemplate">
